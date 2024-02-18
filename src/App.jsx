@@ -6,8 +6,8 @@ import Error from './pages/error/Error';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
-import './App.css'
-import './assets/variables/Variables.css'
+import './App.scss'
+import './assets/variables/Variables.scss'
 
 function App() {
   return (
