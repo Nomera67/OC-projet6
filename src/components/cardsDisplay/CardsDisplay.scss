@@ -1,0 +1,22 @@
+@use '../../assets/variables/Variables.scss' as *;
+
+.display{
+    max-width: 1240px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: $grey-color;
+    border-radius: 25px;
+    gap: 50px 60px;
+    padding: 55px 50px;
+}
+
+@media (max-width: 510px){
+    .display{
+        background-color: $secondary-color;
+        padding: 16px;
+    }   
+}

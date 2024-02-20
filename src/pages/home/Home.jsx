@@ -1,10 +1,13 @@
 import './Home.scss'
+import Banner from '../../components/banner/Banner'
+import CardsDisplay from '../../components/cardsDisplay/CardsDisplay'
 
-function Home() {
+function Home({ logements }) {
 
   return (
-    <div className="">
-        Accueil
+    <div className="homepage__container">
+        <Banner />
+        <CardsDisplay logements={logements} />
     </div>
   )
 }

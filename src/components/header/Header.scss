@@ -1,3 +1,49 @@
+@use '../../assets/variables/Variables.scss' as *;
+
+.header{
+    max-width: 1180px;
+    padding: 45px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    &__logo{
+        &--large{
+            display: block;
+        }
+        &--small{
+            display: none;
+        }
+    }
+    &__nav{
+        font-size: $main-title-size;
+        display: flex;
+        gap: 55px;
+        align-items: center;
+        text-wrap: wrap;
+        font-weight: 500;
+    }
+}
+
 .active-link{
     border-bottom: 1px solid black;
+}
+
+@media (max-width: 510px){
+    .header{
+        padding: 20px;
+        &__logo{
+            &--large{
+                display: none;
+            }
+            &--small{
+                display: block;
+            }
+        }
+        &__nav{
+            font-size: $small-text-size;
+            gap: 25px;
+        }
+    }
 }
