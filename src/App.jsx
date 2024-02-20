@@ -7,7 +7,6 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 
 import './App.scss'
-import './assets/variables/Variables.scss'
 
 function App() {
   return (
