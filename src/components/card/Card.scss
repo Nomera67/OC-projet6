@@ -1,0 +1,38 @@
+@use '../../assets/variables/Variables.scss' as *;
+
+.card{
+    width: 340px;
+    height: 340px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    &__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50% -50%);
+        height: 100%;
+        transition: all 0.25s ease;
+    }
+    &__title{
+        z-index: 1;
+        font-size: $medium-title-size;
+        color: $secondary-color;
+        font-weight: 700;
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+    }
+    &:hover{
+        & > .card__img{
+            filter: brightness(60%);
+        }
+    }
+}
+
+@media (max-width: 510px){
+    .card{
+        height: 255px;
+        width: 335px;
+    }   
+}

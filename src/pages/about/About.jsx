@@ -4,7 +4,7 @@ import Banner from '../../components/banner/Banner'
 function About() {
 
   return (
-    <div className="about__container">
+    <div className="about">
       <Banner />
     </div>
   )
