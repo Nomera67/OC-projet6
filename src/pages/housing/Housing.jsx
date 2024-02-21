@@ -1,6 +1,7 @@
 import { useEffect } from 'react'; 
 import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../../components/carousel/Carousel';
+import Rating from '../../components/rating/Rating';
 import './Housing.scss';
 
 function Housing({ logements }) {
@@ -38,7 +39,7 @@ function Housing({ logements }) {
             <img src={logement.host.picture} alt={logement.host.name} className="housing__img" />
             <p className='housing__name'>{logement.host.name}</p>
           </div>
-          <div className="rating">It's rating</div>
+          <Rating rating={logement.rating} />
         </div>
       </div>
       
