@@ -1,0 +1,19 @@
+@use '../../assets/variables/Variables.scss' as *;
+
+.rating{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (max-width: 400px){
+    .rating{
+        gap: 7px;
+    }
+    .star{
+        width: 13px;
+    }
+}

@@ -13,11 +13,11 @@
 }
 
 body{
-    font-family: 'Montserrat';
     background-color: $secondary-color;
+    font-family: 'Montserrat';
 }
 
-a{
+a, h2{
     text-decoration: none;
     color: black;
 }
