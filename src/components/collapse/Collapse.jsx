@@ -45,7 +45,7 @@ function Collapse({ title, content }) {
                 </button>
             </div>
             <div className={`collapse__content ${isOpen ? 'show' : ''}`} ref={contentRef}>
-                <p>{renderContent()}</p>
+                {renderContent()}
             </div>
         </div>
     );

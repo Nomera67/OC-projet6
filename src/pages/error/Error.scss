@@ -1,0 +1,49 @@
+@use '../../assets/variables/Variables.scss' as *;
+
+.error{
+    color: $main-color;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 130px;
+    padding: 100px 20px;
+    &__number{
+        font-size: $main-error-title;
+    }
+    &__message{
+        font-size: $housing-title-size;
+        text-align: center;
+    }
+    &__link{
+        font-size: $medium-title-size;
+        color: $third-color;
+        text-decoration: underline;
+        cursor: pointer;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 570px){
+    .error{
+        color: $main-color;
+        gap: 100px;
+        padding: 100px 20px;
+        &__number{
+            font-size: $small-error-title;
+        }
+        &__message{
+            font-size: $medium-title-size;
+            text-align: center;
+        }
+        &__link{
+            font-size: $main-tags-size;
+            color: $third-color;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}
