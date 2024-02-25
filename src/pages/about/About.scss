@@ -1,0 +1,8 @@
+@use '../../assets/variables/Variables.scss' as *;
+
+.about{
+    &__collapses{
+        width: 1020px;
+        margin: auto;
+    }
+}
