@@ -10,6 +10,22 @@ function Collapse({ title, content }) {
         setIsOpen(!isOpen);
     };
 
+    //Vérification du contenu des informations envoyées en content. Si c'est un tableau alors on fait une liste, sinon un p
+
+    const renderContent = () => {
+        if (Array.isArray(content)) {
+          return (
+            <ul>
+              {content.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          );
+        } else {
+          return <p>{content}</p>;
+        }
+    };
+
     useEffect(() => {
         if (isOpen) {
             contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`;
@@ -29,7 +45,7 @@ function Collapse({ title, content }) {
                 </button>
             </div>
             <div className={`collapse__content ${isOpen ? 'show' : ''}`} ref={contentRef}>
-                <p>{content}</p>
+                <p>{renderContent()}</p>
             </div>
         </div>
     );

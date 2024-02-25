@@ -60,6 +60,11 @@
         text-wrap: wrap;
         text-align: right;
     }
+    &__collapses{
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+    }
 }
 
 @media (max-width: 1280px){

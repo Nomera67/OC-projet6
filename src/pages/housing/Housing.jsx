@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Carousel from '../../components/carousel/Carousel';
 import Rating from '../../components/rating/Rating';
+import Collapse from '../../components/collapse/Collapse';
 import './Housing.scss';
 
 function Housing({ logements }) {
@@ -42,6 +43,19 @@ function Housing({ logements }) {
           <Rating rating={logement.rating} />
         </div>
       </div>
+      
+      <div className="housing__collapses">
+      <Collapse
+          title='Description'
+          content={logement.description}
+      />
+
+      <Collapse
+        title='Équipements'
+        content={logement.equipments}
+      />
+      </div>
+
       
     </div>
   )
