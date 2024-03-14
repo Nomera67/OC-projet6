@@ -43,3 +43,17 @@
         transform: rotate(-180deg);
     }
 }
+
+@media (max-width: 510px){
+    .collapse{
+        &__title{
+            font-size: $small-title-size;
+        }
+        &__content{
+            font-size: $small-text-size;
+        }
+        &__arrow{
+            width: 16px;
+        }
+    }
+}

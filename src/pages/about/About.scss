@@ -2,7 +2,15 @@
 
 .about{
     &__collapses{
-        width: 1020px;
+        max-width: 1020px;
         margin: auto;
+    }
+}
+
+@media (max-width: 1020px){
+    .about{
+        &__collapses{
+            padding: 0 16px;
+        }
     }
 }
