@@ -17,6 +17,7 @@
         cursor: pointer;
         background-color: transparent;
         border: none;
+        z-index: 1;
     }
     &__title {
         font-size: $main-title-size;
@@ -46,11 +47,15 @@
 
 @media (max-width: 510px){
     .collapse{
+        &__header{
+            height: 30px;
+        }
         &__title{
             font-size: $small-title-size;
         }
         &__content{
             font-size: $small-text-size;
+            padding: 15px;
         }
         &__arrow{
             width: 16px;

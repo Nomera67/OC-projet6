@@ -45,15 +45,15 @@ function Housing({ logements }) {
       </div>
       
       <div className="housing__collapses">
-      <Collapse
-          title='Description'
-          content={logement.description}
-      />
+        <Collapse
+            title='Description'
+            content={logement.description}
+        />
 
-      <Collapse
-        title='Équipements'
-        content={logement.equipments}
-      />
+        <Collapse
+          title='Équipements'
+          content={logement.equipments}
+        />
       </div>
 
       

@@ -72,3 +72,45 @@
         margin: 50px 20px 50px 20px;
     }
 }
+
+@media (max-width: 600px){
+    .housing{
+        margin: auto 20px;
+        &__informations{
+            flex-direction: column;
+            margin: 20px 0;
+        }
+        &__title{
+            font-size: $medium-title-size;
+        }
+        &__location{
+            font-size: $main-tags-size;
+        }
+        &__tags{
+            margin: 10px 0;
+            & > li{
+                font-size: $small-tags-size;
+            }
+        }
+        &__secondary{
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin: auto;
+            align-items: center;
+            gap: inherit;
+            max-width: inherit;
+            width: 100%;
+        }
+        &__img{
+            width: 32px;
+        }
+        &__name{
+            font-size: $small-text-size;
+        }
+        &__collapses{
+            flex-direction: column;
+            gap: 0px;
+
+        }
+    }
+}

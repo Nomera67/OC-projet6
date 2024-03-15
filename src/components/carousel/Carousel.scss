@@ -30,5 +30,24 @@
     }
     &__img{
         width: 100%;
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: 420px){
+    .carousel{
+        height: 255px;
+        &__img{
+            border-radius: 10px;
+            object-position: center;
+            width: auto;
+            height: 350px;
+        }
+        &__buttons{
+            top: 50%;
+            & > img{
+                width: 12px;
+            }
+        }
     }
 }
