@@ -3,6 +3,7 @@ import starActive from '../../assets/pictogram/active-star.png';
 import starInactive from '../../assets/pictogram/inactive-star.png';
 
 function Rating({ rating }) {
+    // Prend le rating de Housing en props pour ensuite l'appliquer et itérer sur un tableau les étoiles actives et inactives
     const totalStars = 5;
     const activeStars = Number(rating);
     const inactiveStars = totalStars - activeStars;
