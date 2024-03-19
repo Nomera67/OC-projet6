@@ -4,6 +4,8 @@ import collapseArrow from '../../assets/pictogram/arrow.png';
 
 function Collapse({ title, content }) {
     const [isOpen, setIsOpen] = useState(false);
+    // Permet d'avoir une référence malgré les cycles de rendu de composant pour l'attacher au content collapse
+    // Puis avec current de lire puis ajuster son scrollHeight
     const contentRef = useRef(null);
 
     const toggleCollapse = () => {
@@ -11,7 +13,6 @@ function Collapse({ title, content }) {
     };
 
     //Vérification du contenu des informations envoyées en content. Si c'est un tableau alors on fait une liste, sinon un p
-
     const renderContent = () => {
         if (Array.isArray(content)) {
           return (
@@ -26,6 +27,7 @@ function Collapse({ title, content }) {
         }
     };
 
+    // Permet de réagir à l'ouverture ou la fermeture du conteneur en changeant la hauteur maximale et de faire l'animation nécessaire
     useEffect(() => {
         if (isOpen) {
             contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`;

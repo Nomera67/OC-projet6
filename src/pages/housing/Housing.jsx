@@ -7,9 +7,13 @@ import './Housing.scss';
 
 function Housing({ logements }) {
   const navigate = useNavigate();
+  // Récupération de l'id de logement dans l'URL
   const { id } = useParams();
+  // Utilisation de find pour trouver le premier logement qui possède l'id correspondant à l'id prise dans l'URL
   const logement = logements.find(logement => logement.id === id);
 
+  // Vérification d'un logement correspondant. Si rien n'est trouvé, redirection vers la page 404 et remplace 
+  // L'URL pour empêcher l'utilisateur d'y retourner en utilisant le retour dans la navigateur
   useEffect(() => {
     if (!logement) {
       navigate('/not-found', { replace: true });
